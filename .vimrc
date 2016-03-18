@@ -1,5 +1,64 @@
 set nocompatible              " be iMproved, required
-filetype off                  " required
+
+
+set clipboard=unnamed
+autocmd! bufwritepost .vimrc source %
+
+" Rebind <Leader> key
+" " I like to have it here becuase it is easier to reach than the default and
+" " it is next to ``m`` and ``n`` which I use for navigating between tabs.
+let mapleader = ","
+" easier moving between tabs
+map <Leader>n <esc>:tabprevious<CR>
+map <Leader>m <esc>:tabnext<CR>
+
+" bind Ctrl+<movement> keys to move around the windows, instead of using
+" Ctrl+w + <movement>
+" Every unnecessary keystroke that can be saved is good for your health :)
+map <c-j> <c-w>j
+map <c-k> <c-w>k
+map <c-l> <c-w>l
+map <c-h> <c-w>h
+
+" map sort function to a key
+vnoremap <Leader>s :sort<CR>
+
+" easier moving of code blocks
+" Try to go into visual mode (v), thenselect several lines of code here and
+" then press ``>`` several times.
+vnoremap < <gv  " better indentation
+vnoremap > >gv  " better indentation
+
+" Show whitespace
+" MUST be inserted BEFORE the colorscheme command
+autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
+au InsertLeave * match ExtraWhitespace /\s\+$/
+
+
+" Color scheme
+"mkdir -p ~/.vim/colors && cd ~/.vim/colors
+"wget -O wombat256mod.vim http://www.vim.org/scripts/download_script.php?src_id=13400
+set t_Co=256
+"color wattslandia 
+"color oceandeep 
+color wombat256mod
+
+
+" Showing line numbers and length
+set number  " show line numbers
+set tw=79   " width of document (used by gd)
+set nowrap  " don't automatically wrap on load
+set fo-=t   " don't automatically wrap text when typing
+" set colorcolumn=80
+" highlight ColorColumn ctermbg=200
+
+" Useful settings
+set history=700
+set undolevels=700
+
+set nobackup
+set nowritebackup
+set noswapfile
 
 set rtp+=/Users/shengao/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -19,6 +78,9 @@ Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 
 
 call vundle#end()            " required
+
+syntax on               " turn syntax highlighting on by default
+filetype off             " detect type of file
 filetype plugin indent on    " required
 
 " auto start
@@ -38,13 +100,6 @@ let g:syntastic_check_on_wq = 0
 
 set clipboard=unnamed
 
-
-" map keys
-" navigate between splits
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
 
 
 au BufNewFile,BufRead *.py
@@ -80,7 +135,6 @@ set autoindent          " set auto-indenting on for programming
 
 set showcmd             " display incomplete commands
 set nobackup            " do not keep a backup file
-set number              " show line numbers
 set ruler               " show the current row and column
 
 set hlsearch            " highlight searches
@@ -95,9 +149,7 @@ set novisualbell        " turn off visual bell
 
 set backspace=indent,eol,start  " make that backspace key work the way it should
 
-syntax on               " turn syntax highlighting on by default
-filetype on             " detect type of file
-filetype indent on      " load indent file for specific file type
+
 set expandtab
 set tabstop=2
 
