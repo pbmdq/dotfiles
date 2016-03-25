@@ -27,18 +27,22 @@ export GPG_AGENT_INFO
 # default JVM for OSX
 #export JAVA_HOME=$(/usr/libexec/java_home)
 # specified JVM for OSX
-export JAVA_HOME=$(/usr/libexec/java_home -v 1.7)
-# export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
+# set in /etc/profile
+# export JAVA_HOME=$(/usr/libexec/java_home -v 1.7)
+export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 
 # hadoop and spark
+# original path
+#export YARN_PREFIX=/Users/shengao/Library/Spark
 export HADOOP_USER_NAME=shengao
-export YARN_PREFIX=/Users/shengao/Library/Spark
+export YARN_PREFIX=/usr/local
 export HADOOP_HOME=$YARN_PREFIX/hadoop-2.2.0
 export SPARK_PREFIX=$YARN_PREFIX/spark-1.4.1-bin-hadoop2.3
 export HADOOP_CONF_DIR=$HADOOP_HOME/etc/hadoop
 export PATH=$HADOOP_HOME/bin:$SPARK_PREFIX/bin:$PATH
+export PATH=$HADOOP_HOME/sbin:$SPARK_PREFIX/sbin:$PATH
 export PATH=$JAVA_HOME/bin:$PATH
-
+export HADOOP_INSTALL=$HADOOP_HOME
 # appearence
 #export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]\$ "
 export CLICOLOR=1

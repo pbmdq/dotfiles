@@ -57,7 +57,7 @@ plugins=(git)
 
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/texbin"
 # export MANPATH="/usr/local/man:$MANPATH"
-
+source ~/.bash_profile
 source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
