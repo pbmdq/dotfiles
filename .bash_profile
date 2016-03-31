@@ -49,7 +49,7 @@ export HADOOP_INSTALL=$HADOOP_HOME
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
 #alias ls='ls -GFh'
-alias sourceProfile='source ~/.bash_profile'
+alias scpro='source ~/.bash_profile'
 
 alias restart_en0='sudo ifconfig en0 down && sudo ifconfig en0 up'
 
@@ -108,3 +108,19 @@ export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 # export PATH="/Users/shengao/anaconda/bin:$PATH"
 export PATH=/usr/local/bin:$PATH
 alias vim=/usr/local/bin/vim
+
+alias ga='git add'
+alias gp='git push'
+alias gl='git log'
+alias gs='git status'
+alias gd='git diff'
+alias gdc='git diff --cached'
+alias gm='git commit -m'
+alias gma='git commit -am'
+alias gb='git branch'
+alias gc='git checkout'
+alias gra='git remote add'
+alias grr='git remote rm'
+alias gpu='git pull'
+alias gcl='git clone'
+
