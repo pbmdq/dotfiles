@@ -1,4 +1,32 @@
+let mapleader = ","
 set nocompatible              " be iMproved, required
+filetype off             " detect type of file
+
+set rtp+=/Users/shengao/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'vim-scripts/indentpython.vim'
+Bundle 'Valloric/YouCompleteMe'
+let g:ycm_autoclose_preview_window_after_completion=1
+map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
+
+Plugin 'scrooloose/syntastic'
+Plugin 'nvie/vim-flake8'
+Plugin 'jnurmine/Zenburn'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'scrooloose/nerdtree'
+Plugin 'jistr/vim-nerdtree-tabs'
+Plugin 'kien/ctrlp.vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+
+
+call vundle#end()            " required
+
+filetype plugin indent on    " required
+syntax on               " turn syntax highlighting on by default
+
 
 
 set clipboard=unnamed
@@ -7,7 +35,6 @@ autocmd! bufwritepost .vimrc source %
 " Rebind <Leader> key
 " " I like to have it here becuase it is easier to reach than the default and
 " " it is next to ``m`` and ``n`` which I use for navigating between tabs.
-let mapleader = ","
 " easier moving between tabs
 map <Leader>n <esc>:tabprevious<CR>
 map <Leader>m <esc>:tabnext<CR>
@@ -47,8 +74,8 @@ color wombat256mod
 " Showing line numbers and length
 set number  " show line numbers
 set tw=79   " width of document (used by gd)
-set nowrap  " don't automatically wrap on load
-set fo-=t   " don't automatically wrap text when typing
+" set nowrap  " don't automatically wrap on load
+" set fo-=t   " don't automatically wrap text when typing
 " set colorcolumn=80
 " highlight ColorColumn ctermbg=200
 
@@ -59,29 +86,6 @@ set undolevels=700
 set nobackup
 set nowritebackup
 set noswapfile
-
-set rtp+=/Users/shengao/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'vim-scripts/indentpython.vim'
-" Bundle 'Valloric/YouCompleteMe'
-Plugin 'scrooloose/syntastic'
-Plugin 'nvie/vim-flake8'
-Plugin 'jnurmine/Zenburn'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'scrooloose/nerdtree'
-Plugin 'jistr/vim-nerdtree-tabs'
-Plugin 'kien/ctrlp.vim'
-Plugin 'tpope/vim-fugitive'
-Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
-
-
-call vundle#end()            " required
-
-syntax on               " turn syntax highlighting on by default
-filetype off             " detect type of file
-filetype plugin indent on    " required
 
 " auto start
 " autocmd VimEnter * NERDTree

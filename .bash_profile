@@ -39,6 +39,7 @@ export YARN_PREFIX=/usr/local
 export HADOOP_HOME=$YARN_PREFIX/hadoop-2.2.0
 export SPARK_PREFIX=$YARN_PREFIX/spark-1.4.1-bin-hadoop2.3
 export HADOOP_CONF_DIR=$HADOOP_HOME/etc/hadoop
+export HADOOP_LOG_DIR=$HADOOP_HOME/logs
 export PATH=$HADOOP_HOME/bin:$SPARK_PREFIX/bin:$PATH
 export PATH=$HADOOP_HOME/sbin:$SPARK_PREFIX/sbin:$PATH
 export PATH=$JAVA_HOME/bin:$PATH
@@ -49,6 +50,8 @@ export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
 #alias ls='ls -GFh'
 alias sourceProfile='source ~/.bash_profile'
+
+alias restart_en0='sudo ifconfig en0 down && sudo ifconfig en0 up'
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
@@ -103,3 +106,5 @@ export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 
 # added by Anaconda 2.0.1 installer
 # export PATH="/Users/shengao/anaconda/bin:$PATH"
+export PATH=/usr/local/bin:$PATH
+alias vim=/usr/local/bin/vim
