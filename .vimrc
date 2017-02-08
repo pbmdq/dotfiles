@@ -83,9 +83,9 @@ set tw=79   " width of document (used by gd)
 set history=700
 set undolevels=700
 
-set nobackup
-set nowritebackup
-set noswapfile
+" set nobackup
+" set nowritebackup
+" set noswapfile
 
 " auto start
 " autocmd VimEnter * NERDTree

@@ -1,3 +1,11 @@
+#MongoDB
+export PATH=$PATH:/Users/shengao/mongoDB/mongodb-osx-x86_64-3.2.10/bin
+#heron setup
+export PATH=$PATH:~/bin
+
+
+#icdiff
+export PATH="/Users/shengao/Apps_downloaded/icdiff:$PATH"
 #ctags
 export PATH="/usr/local/bin:$PATH"
 
@@ -17,7 +25,6 @@ export PATH="/Users/shengao/Library/Application Support/GoodSync":$PATH
 export CLICOLOR=1
 export PATH="~shengao/bin":$PATH
 export TERM=xterm-256color
-alias ls="ls -l"
 export PROMPT_COMMAND='echo -ne "\033]0;$PWD\007"'
 eval $(gpg-agent --daemon --no-grab --write-env-file $HOME/.gpg-agent-info)
 export GPG_TTY=$(tty)
@@ -28,7 +35,7 @@ export GPG_AGENT_INFO
 #export JAVA_HOME=$(/usr/libexec/java_home)
 # specified JVM for OSX
 # set in /etc/profile
-# export JAVA_HOME=$(/usr/libexec/java_home -v 1.7)
+#export JAVA_HOME=$(/usr/libexec/java_home -v 1.7)
 export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 
 # hadoop and spark
@@ -48,8 +55,8 @@ export HADOOP_INSTALL=$HADOOP_HOME
 #export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]\$ "
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
-#alias ls='ls -GFh'
-alias scpro='source ~/.bash_profile'
+# alias ls='ls -GFh'
+# alias sc_pro='source ~/.bash_profile'
 
 alias restart_en0='sudo ifconfig en0 down && sudo ifconfig en0 up'
 
@@ -58,9 +65,9 @@ alias restart_en0='sudo ifconfig en0 down && sudo ifconfig en0 up'
 # ~/.bash_aliases, instead of adding them here directly.
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
 
-#if [ -f ~/.bash_aliases ]; then
-#    . ~/.bash_aliases
-#fi
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
 
 
 #if this is an xterm set the title to user@host:dir
@@ -82,10 +89,10 @@ esac
 #fi
 
 # some more ls aliases
-alias ll='ls -l'
-alias la='ls -A'
-alias l='ls -CF'
-alias today='date +"%A, %B %-d, %Y"'
+#alias ll='ls -l'
+#alias la='ls -A'
+#alias l='ls -CF'
+#alias today='date +"%A, %B %-d, %Y"'
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
