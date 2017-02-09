@@ -4,4 +4,4 @@ alias l='ls -CF'
 alias today='date +"%A, %B %-d, %Y"'
 
 alias sc_pro='source ~/.bash_profile'
-
+alias sshgru='ssh gru.ifi.uzh.ch'

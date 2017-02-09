@@ -1,3 +1,7 @@
+# Solve unknown locale: UTF-8 in Python
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+
 #MongoDB
 export PATH=$PATH:/Users/shengao/mongoDB/mongodb-osx-x86_64-3.2.10/bin
 #heron setup
